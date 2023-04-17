@@ -9,6 +9,7 @@ import colors from "../../sass/colors";
 
 import { addCreditCard } from "../../redux/creditCardSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const options = [
   {
@@ -17,14 +18,24 @@ const options = [
     svg: bitcoin,
     color: colors.orange,
   },
-  { value: "ninjaBank", label: "NINJA BANK", svg: ninja, color: colors.black },
+  {
+    value: "ninjaBank",
+    label: "NINJA BANK",
+    svg: ninja,
+    color: colors.black,
+  },
   {
     value: "blockChain",
     label: "BLOCK CHAIN INC",
     svg: blockChain,
     color: colors.purple,
   },
-  { value: "evilCorp", label: "EVIL CORP", svg: evil, color: colors.red },
+  {
+    value: "evilCorp",
+    label: "EVIL CORP",
+    svg: evil,
+    color: colors.red,
+  },
 ];
 
 export const CardForm = () => {
@@ -35,6 +46,11 @@ export const CardForm = () => {
   const [vendor, setVendor] = React.useState(options);
   const crediteCards = useSelector((state) => state.creditCards);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,6 +62,7 @@ export const CardForm = () => {
     setValidThru("");
     setCCV("");
     setVendor({});
+    goBack();
   };
   console.log(crediteCards);
 
