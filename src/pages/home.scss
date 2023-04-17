@@ -1,0 +1,18 @@
+
+.screen {
+ background-color: white;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+  &__newCard-button {
+    height: 50px;
+    width: 380px;
+    color: black;
+    font-size: medium;
+    letter-spacing: 2px;
+    background-color: white;
+    border-radius: 10px;
+    border-width: 1px;
+  }
+}
