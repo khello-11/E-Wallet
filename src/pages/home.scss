@@ -2,11 +2,14 @@
 .screen {
  background-color: white;
  display: flex;
+ justify-content: center;
  flex-direction: column;
  align-items: center;
+ padding: 10px;
 
   &__newCard-button {
     height: 50px;
+    
     width: 380px;
     color: black;
     font-size: medium;

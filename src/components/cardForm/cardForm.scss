@@ -4,6 +4,7 @@
   font-family: "Courier New", Courier, monospace;
   gap: 10px;
   padding: 10px;
+  
 
   &__input {
     height: 50px;
@@ -12,6 +13,8 @@
     width: 100%;
     border-radius: 5px;
     border-width: 1px;
+  padding: 10px;
+
   }
   &__valid-ccv-container {
     display: flex;
@@ -20,11 +23,16 @@
     height: 50px;
     border-radius: 5px;
     border-width: 1px;
+  padding: 10px;
+
   }
   &__ccv-input {
     height: 50px;
     border-radius: 5px;
     border-width: 1px;
+  padding:10px;
+  // font-size: 15px;
+
   }
   &__options {
     background-color: rgb(196, 117, 15);
